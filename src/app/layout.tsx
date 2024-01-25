@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import {ThemeProvider} from "@/components/theme-provider";
 import {NavigationMenuDemo} from "@/components/nav";
+import { Toaster } from "@/components/ui/toaster"
 
 const fontSans = FontSans({ subsets: ["latin"] });
 
@@ -27,8 +28,9 @@ export default function RootLayout({
           disableTransitionOnChange
       >
           <NavigationMenuDemo/>
-        {children}
+          <main>{children}</main>
       </ThemeProvider>
+      <Toaster />
       </body>
     </html>
   );
