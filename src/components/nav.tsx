@@ -22,6 +22,7 @@ import {MoonIcon, SunIcon} from "@radix-ui/react-icons";
 import { Separator } from "@/components/ui/separator"
 import Image from 'next/image'
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import XYi from "@/components/icons/personal";
 export function NavigationMenuDemo() {
     const { setTheme } = useTheme()
     return (
@@ -29,11 +30,11 @@ export function NavigationMenuDemo() {
             <NavigationMenu className="container w-1/2 ">
                 <NavigationMenuList className="grid grid-cols-12 gap-2">
                     <NavigationMenuItem className="">
-                        <Link href="/" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                首页
-                            </NavigationMenuLink>
+
+                        <Link href="/">
+                           <XYi/>
                         </Link>
+
                     </NavigationMenuItem>
                     <NavigationMenuItem className="">
                         <Link href="/blog" legacyBehavior passHref>
