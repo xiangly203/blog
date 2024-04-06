@@ -28,6 +28,7 @@
     "next-mdx-remote": "^4.4.1",
     "next-on-pages-monorepo": "cloudflare/next-on-pages",
     "next-themes": "^0.2.1",
+    "pnpm": "^8.15.6",
     "react": "^18",
     "react-dom": "^18",
     "tailwind-merge": "^2.2.1",
