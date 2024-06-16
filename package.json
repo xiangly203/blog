@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint"
   },
+  "resolutions": { "string-width": "4.2.3" },
   "dependencies": {
     "@cloudflare/next-on-pages": "1",
     "@mdx-js/loader": "^3.0.0",
