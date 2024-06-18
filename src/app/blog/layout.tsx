@@ -5,7 +5,7 @@ export default function BlogLayout({
                                         }: {
     children: React.ReactNode
 }) {
-    return <section className="container w-1/2 py-2">
+    return <section className="container lg:w-1/2 py-2">
         {children}
     </section>
 }
