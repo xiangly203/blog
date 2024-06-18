@@ -26,27 +26,27 @@ export function NavigationMenuDemo() {
   return (
     <div className="w-full">
       <NavigationMenu className=" sm:container xl:container mx-auto px-4">
-        <NavigationMenuList className="flex flex-row w-full justify-around items-center lg:gap-32 gap-2">
-          <NavigationMenuItem className="flex-1 ">
+        <NavigationMenuList className="grid grid-cols-4 w-full justify-between items-center lg:gap-32 gap-8">
+          <NavigationMenuItem className="">
             <Link href="/">
               <XYi />
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className="flex-1 ">
+          <NavigationMenuItem className="">
             <Link href="/blog" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Blog
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className="flex-1 ">
+          <NavigationMenuItem className="">
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className="flex-1 ">
+          <NavigationMenuItem className="">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
