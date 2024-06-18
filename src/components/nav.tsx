@@ -2,7 +2,6 @@
 import * as React from "react";
 import Link from "next/link";
 
-import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import {
@@ -13,7 +12,6 @@ import {
 } from "@/components/ui/dropdown-menu";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
@@ -21,38 +19,34 @@ import {
 } from "@/components/ui/navigation-menu";
 import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import XYi from "@/components/icons/personal";
 
 export function NavigationMenuDemo() {
   const { setTheme } = useTheme();
   return (
     <div className="w-full">
-      <NavigationMenu className="container w-full px-4 sm:w-1/2 sm:px-0">
-        <NavigationMenuList className="flex flex-wrap gap-2">
-          <NavigationMenuItem className="flex-1 sm:flex-none sm:w-auto">
+      <NavigationMenu className=" sm:container xl:container mx-auto px-4">
+        <NavigationMenuList className="flex flex-row w-full justify-around items-center lg:gap-32 gap-2">
+          <NavigationMenuItem className="flex-1 ">
             <Link href="/">
               <XYi />
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className="flex-1 sm:flex-none sm:w-auto">
+          <NavigationMenuItem className="flex-1 ">
             <Link href="/blog" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                博客
+                Blog
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className="flex-1 sm:flex-none sm:w-auto">
+          <NavigationMenuItem className="flex-1 ">
             <Link href="/about" legacyBehavior passHref>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                关于我
+                About
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
-          <NavigationMenuItem className="flex-1 sm:flex-none sm:w-auto">
-            {/* 调整排列布局 */}
-          </NavigationMenuItem>
-          <NavigationMenuItem className="ml-auto">
+          <NavigationMenuItem className="flex-1 ">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" size="icon">
